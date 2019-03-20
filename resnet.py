@@ -24,7 +24,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model_type_mapping = {'ResNet18': torchvision.models.resnet18, 'ResNet50': torchvision.models.resnet50}
 
 
-@retry(wait_fixed=2000, stop_max_attempt_number=5)
+@retry(wait_fixed=2000, stop_max_attempt_number=5, retry_on_exception=lambda e: isinstance(e, RuntimeError))
 def get_pretrained_resnet(is_freeze_weights, number_of_labels, model_type):
     logging.info("loading pretrained resnet model with %d number of labels", number_of_labels)
 
