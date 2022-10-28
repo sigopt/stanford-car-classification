@@ -20,7 +20,7 @@ jmespath==0.9.4
 kiwisolver==1.0.1
 kubernetes==8.0.0
 matplotlib==3.0.3
-numpy==1.16.1
+numpy==1.22.4
 oauthlib==3.0.1
 orchestrate==0.3.3
 pandas==0.24.1
