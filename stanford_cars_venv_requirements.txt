@@ -44,7 +44,7 @@ scipy==1.2.1
 sigopt==3.6.4
 six==1.11.0
 sklearn==0.0
-torch==1.0.1.post2
-torchvision==0.2.1
+torch>=1.13.0
+torchvision>=0.2.1
 urllib3>=1.26.5
 websocket-client==0.55.0
